@@ -1,0 +1,39 @@
+{
+  "Version": 1,
+  "InputFile":"TESTDATA.BIN",
+  "OutputConfigBlock": "40-S2-S1-All.bin",
+  "PrivateKeyFile": "keys\\RSA_4096_Private_Platform.PEM",
+  "OutputRawPubkey" : "RSA_4096_Public_Platform.bin",
+  "HashingType": "2",
+  "Jobs":
+  [ 
+	  {	
+	  	"Seq":1,
+	  	"RegionID": 2,
+	  	"PrivateKeyFile": "keys\\rsa_4096_part_C.pem",
+	  	"HashingType": "1",	
+	  	"OutputRawFile": "Partition_C.bin"
+	  },
+	  {	
+	  	"Seq":2,
+	  	"RegionID": 3,
+	  	"PrivateKeyFile": "keys\\rsa_4096_part_D.pem",
+	  	"HashingType": "1",	
+	  	"OutputRawFile": "Partition_D.bin"
+	  },
+	  {	
+	  	"Seq":3,
+	  	"RegionID": 4,
+	  	"PrivateKeyFile": "keys\\rsa_4096_part_E.pem",
+	  	"HashingType": "1",
+	  	"OutputRawFile": "Partition_E.bin"
+	  },
+	  {	
+	  	"Seq":0,
+	  	"RegionID": 1,
+	  	"PrivateKeyFile": "keys\\rsa_4096_mbr.pem",
+	  	"HashingType": "1",	
+	  	"OutputRawFile": "MBR_Raw.bin"
+	  }
+  ]
+}
